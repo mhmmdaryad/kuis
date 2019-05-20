@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class data extends view {
+public class data extends OptionPane {
 
   /*  void pemain(player){
        ArrayList<player>;
