@@ -8,10 +8,12 @@ public class view {
     public void menuUtama() {
 
         OptionPane panel = new OptionPane();
-        mulai start= new mulai();
-        peraturan aturan=new peraturan();
+        mulai start = new mulai();
         Scanner s = new Scanner(System.in);
-        int pilih;
+        String opsi;
+        int pilih = 0;
+        String pertama = "1";
+        String kedua = "2";
 
         System.out.println("\n=============== SELAMAT DATANG DI KUIS ISLAM ===============\n");
         System.out.println(" UNTUK MEMENUHI TUGAS BESAR MATA KULIAH PEMROGRAMAN LANJUT\n");
@@ -21,13 +23,24 @@ public class view {
         System.out.println("\n 1. MULAI");
         System.out.println("\n 2. PERATURAN");
 
-        for (; ; ) {
+
+        while (x = true) {
             try {
                 System.out.println("\nPilih ?");
-                pilih = s.nextInt();
+                opsi = s.nextLine();
+
+                if (opsi.equals(pertama)) {
+                    pilih = 1;
+                } else if (opsi.equals(kedua)) {
+                    pilih = 2;
+                } else {
+                    throw new Exception();
+                }
                 break;
             } catch (Exception e) {
                 panel.salahInput();
+                //   x = false;
+
             }
         }
 
@@ -38,7 +51,7 @@ public class view {
                 break;
             case 2:
 
-               aturan.peraturan();
+                panel.peraturan();
                 break;
         }
     }
