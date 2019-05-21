@@ -8,7 +8,7 @@ public class mulai extends view {
         Scanner s = new Scanner(System.in);
         String jawab;
 
-        JFrame f = new JFrame();
+
 
         for (int i = 1; i <= 5; i++) {
 
@@ -88,6 +88,6 @@ public class mulai extends view {
             }
 
         }
-        panel.hasil();
+        panel.setHasil(poin);
     }
 }

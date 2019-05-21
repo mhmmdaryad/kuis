@@ -1,5 +1,3 @@
-import javax.swing.*;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class view {
@@ -7,9 +5,11 @@ public class view {
     int poin = 0;
     boolean x = false;
 
-    public void menuUtama() throws IOException {
-        //data data = new data();
+    public void menuUtama() {
+
         OptionPane panel = new OptionPane();
+        mulai start= new mulai();
+        peraturan aturan=new peraturan();
         Scanner s = new Scanner(System.in);
         int pilih;
 
@@ -34,12 +34,11 @@ public class view {
         switch (pilih) {
             case 1:
                 panel.masukkanNama();
-                new mulai();
+                start.mulai();
                 break;
             case 2:
 
-               panel.peraturan();
-                //  data.
+               aturan.peraturan();
                 break;
         }
     }
